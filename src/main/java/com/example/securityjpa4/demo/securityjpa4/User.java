@@ -23,6 +23,13 @@ public class User implements UserDetails {
     boolean isEnabled;
     String authorities;
 
+    public User(String userName, String password, boolean isEnabled, String authorities) {
+        this.userName = userName;
+        this.password = password;
+        this.isEnabled = isEnabled;
+        this.authorities = authorities;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
